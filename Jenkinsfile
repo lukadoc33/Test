@@ -20,7 +20,7 @@ pipeline {
     stage("test") {
       when {
         expression {
-          param.ExecuteTest
+          params.ExecuteTest
         }
       }
            steps {
@@ -31,7 +31,7 @@ pipeline {
       
           steps{
             echo 'deploy the application...'
-            echo "deploying version ${param.VESRION}"
+            echo "deploying version ${params.VESRION}"
           }
     }
   
